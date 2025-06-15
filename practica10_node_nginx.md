@@ -1,9 +1,9 @@
 
-# Práctica #10 Creación de un entorno CRUD Mascotas con Docker Compose Con Node y Nginx.
+# Práctica #10 Modo Produccion para CRUD Mascotas con Docker Compose Con Node y Nginx.
 
 ## 1. Título
 
-**Práctica No 9: Creación de un CRUD FullStack de Mascotas (React + Spring Boot + PostgreSQL + pgAdmin) utilizando Docker Compose**
+**Práctica No 10: Modo Produccion para el CRUD de Mascotas (React + Spring Boot + PostgreSQL + pgAdmin) utilizando Docker Compose**
 
 ## 2. Tiempo de duración
 
