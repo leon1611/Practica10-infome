@@ -60,7 +60,7 @@ Node.js es un entorno de ejecución de JavaScript de código abierto, multiplata
 ```
 Otros/
 ├── mascota/          (Backend Spring Boot)
-├── mascota-frontend/ (Frontend React)
+├── mascota-frontend/ (Frontend React + Nginx)
 └── docker-compose.yml
 ```
 
@@ -75,7 +75,8 @@ Otros/
 * Servicio `backend` con Spring Boot.
 * Servicio `frontend` con React y Nginx para servir el build.
 
-![Estructura inicial del docker-compose.yml](<Screenshot 2025-06-07 180605.png>)
+![2](https://github.com/user-attachments/assets/f6e7e092-104a-4605-b5fb-b8e8db827cfa)
+
 
 **Paso 5:** Configurar el backend para permitir CORS desde el frontend.
 
@@ -83,24 +84,28 @@ Otros/
 
 **Paso 7:** Configurar Nginx como proxy inverso y servidor de archivos estáticos. A continuación, se muestra un fragmento del archivo `docker-compose.yml` donde se define el servicio `nginx` y cómo se mapean los volúmenes para su configuración y los archivos estáticos del frontend.
 
-![Definición del servicio Nginx en docker-compose.yml](PHOTO-2025-06-13-21-04-33.jpg)
-*Figura 1: Configuración del servicio Nginx en `docker-compose.yml`.*
+![5](https://github.com/user-attachments/assets/23ff28e0-ba30-4591-a5ea-448956dcef77)
 
-Además, se debe configurar el archivo de configuración de Nginx (`nginx.conf`) para manejar las rutas del frontend, backend y pgAdmin. Un ejemplo de esta configuración se muestra a continuación:
+Además, se debe configurar el archivo de configuración de Nginx (`nginx.conf`) para manejar las rutas del frontend, backend y pgAdmin.
 
-![Configuración de Nginx para enrutamiento](PHOTO-2025-06-13-21-04-34.jpg)
-*Figura 2: Fragmento del archivo `nginx.conf` mostrando la configuración del proxy inverso para el frontend, backend y pgAdmin.*
+![6](https://github.com/user-attachments/assets/ad23ed03-8e4a-44a8-859e-79c7f92deb47)
 
 **Paso 8:** Ejecutar `docker-compose up --build` para levantar el sistema completo.
 
 **Paso 9:** Acceder al sistema CRUD desde el navegador:
 
 * Frontend: `http://localhost:3000`
-![alt text](<Screenshot 2025-06-07 180513.png>)
+  
+![1](https://github.com/user-attachments/assets/87defee7-96c0-4525-bbc0-dd71bd8c2d2f)
+
 * Backend (API): `http://localhost:8080/api/mascotas`
-![alt text](<Screenshot 2025-06-07 180720.png>)
+
+![3](https://github.com/user-attachments/assets/2403c67b-f11e-4a1d-a281-b9d3c4afa307)
+
+
 * pgAdmin: `http://localhost:8081`
-![alt text](<Screenshot 2025-06-07 180942.png>)
+
+![4](https://github.com/user-attachments/assets/11d15058-c593-4566-b0f4-9902ff25b97d)
 
 ## 9. Resultados esperados
 
